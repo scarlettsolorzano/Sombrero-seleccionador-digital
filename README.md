@@ -1,7 +1,7 @@
 # Sombrero seleccionador digital
 Quiz para descubrir tu casa de Hogwarts a través de la línea de comandos de java
 
-## Requisitos 
+## Requisitos funcionales
 - Must have
   - Solicitar el nombre del usuario
   - Mostrar preguntas al usuario
@@ -15,3 +15,10 @@ Quiz para descubrir tu casa de Hogwarts a través de la línea de comandos de ja
   - Mostrar intrucciones antes de inicar el quiz y después de tener el   nombre del usuario (opcional)
 - Won´t have
   - El sistema debe mostrar una descripción de cada casa al finalizar el quiz (opcional)
+
+## Requisitos no funcionales
+  - Almacenar la información en la memoria RAM
+  - Ejecutar en equipos de computo con JDKs
+  - Ejecutar en la versión 21.0.7 de Java en adelante
+  - Tener un monitor
+  - Tener un teclado
