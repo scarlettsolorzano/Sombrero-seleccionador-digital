@@ -3,16 +3,19 @@ import java.util.Scanner;
 
 public class Main {
     static void showQuestion(String question, String answerA, String answerB){
-        System.out.println(
+        System.out.print(
             "\n¿" + question + "? \n" +
             " (A)-" + answerA + "\n" +
-            " (B)-" + answerB + "\n" 
+            " (B)-" + answerB + "\n" +
+            "\nSelecciona A o B: " 
+            
         );
     }
     public static void main(String[] args) {
 
 
         String name, answers;
+        boolean isAnswerInvalid;
         
         User player = new User();
         Scanner sc = new Scanner(System.in);
@@ -26,14 +29,23 @@ public class Main {
 
         player.setName(name);
        
-        showQuestion("Qué es lo más importante para ti", "Ser inteligente", "Ser valiente");
-        
-        answers = sc.nextLine();
-        if (answers.equals("A")) { 
-            showQuestion("Qué animal te gustaría ser"," León","Serpiente");
-        }else{
-            showQuestion("Qué te llama más la atención aprender","Transformaciones","Pociones");
-        }
+        do {
+            showQuestion("Qué es lo más importante para ti", "Ser inteligente", "Ser valiente");
+
+            answers = sc.nextLine();
+            answers = answers.toUpperCase();
+
+            if (answers.equals("A" )) { 
+                showQuestion("Qué animal te gustaría ser"," León","Serpiente");
+                isAnswerInvalid = false;
+            }else if (answers.equals("B")) {
+                showQuestion("Qué te llama más la atención aprender","Transformaciones","Pociones");
+                isAnswerInvalid = false;
+            }else{ 
+                isAnswerInvalid = true;
+                System.out.println("\nError: la respuesta no es válida\n");
+            }
+        } while (isAnswerInvalid );
          
         
         
